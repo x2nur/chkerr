@@ -11,11 +11,6 @@ func Handle(err *error, msg ...string) {
 		}
 		// Intercept only our custom panic from Check
 		recover()
-		//if perr := recover(); perr != nil {
-			//if e, ok := perr.(error); ok && *err != e {
-			//	*err = e
-			//}
-		//}
 	}
 }
 
