@@ -59,29 +59,3 @@ func TestHandle_OtherPanics(t *testing.T) {
 	// simulate other panic before err is assigned
 	panic("exception")
 }
-
-
-//func main() {
-//	length, err := test()
-//	if err != nil {
-//		log.Fatal(err)
-//	} 
-//	fmt.Printf("length=%d\n", length)
-//}
-//
-//func test() (read int, err error) {
-//	// turn on custom error handling
-//	defer Handle(&err, "test() - Can't test file")
-//
-//	file, err := os.Open("go.mod0");
-//	Check(&err) // Use custom error handling
-//	defer file.Close()
-//
-//	buf := make([]byte, 100)
-//	c, err := file.Read(buf);
-//	Check(&err)
-//
-//	read = c
-//
-//	return 
-//}
